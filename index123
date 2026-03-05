@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CleverClassroom Edu</title>
+
+<style>
+
+@font-face {
+  font-family: "Sunborn";
+  src: url("sunborn-sans-one.otf") format("opentype");
+}
+
+body{
+  margin:0;
+  background:#f4f4f4;
+  font-family:Arial, Helvetica, sans-serif;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  height:100vh;
+  text-align:center;
+  color:#1a1a1a;
+}
+
+.container{
+  max-width:700px;
+  padding:40px;
+}
+
+.logo{
+  width:200px;
+  margin-bottom:25px;
+}
+
+h1{
+  font-family:"Sunborn", Arial;
+  font-size:52px;
+  margin-bottom:25px;
+}
+
+p{
+  font-size:18px;
+  line-height:1.6;
+  margin-bottom:40px;
+}
+
+.button{
+  display:inline-block;
+  background:#1e3a8a;
+  color:white;
+  padding:16px 34px;
+  font-size:18px;
+  text-decoration:none;
+  border-radius:8px;
+}
+
+.button:hover{
+  background:#142a63;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<img src="Logo_Cleverclassroom_NoBG.png" class="logo">
+
+<h1>WELCOME TO<br>cleverclassroom-edu</h1>
+
+<p>
+Practical English resources for real classrooms.  
+Clear structures, strong arguments and materials that actually help students succeed in exams.
+</p>
+
+<a class="button"
+href="https://eduki.com/de/autor/4276120/cleverclassroom-edu"
+target="_blank">
+Visit my Eduki Shop
+</a>
+
+</div>
+
+</body>
+</html>
