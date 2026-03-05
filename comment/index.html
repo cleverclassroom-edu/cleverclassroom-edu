@@ -59,19 +59,19 @@ h2{
 .downloadBox{
   border:1px solid var(--border);
   border-radius:18px;
-  padding:26px 26px 22px 26px;
+  padding:26px;
   background:#fafbff;
 }
 
 .previewWrap{
   display:flex;
   justify-content:center;
-  margin:8px 0 14px 0;
+  margin:10px 0 14px 0;
 }
 
 .preview{
   width:min(520px, 100%);
-  height:190px; /* ca. 5 cm bei typischer Bildschirmdarstellung */
+  height:190px;
   border-radius:14px;
   border:1px solid var(--border);
   overflow:hidden;
@@ -92,12 +92,11 @@ h2{
 }
 
 .filename code{
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
   background:#f3f4f6;
   padding:3px 8px;
   border-radius:10px;
   border:1px solid var(--border);
-  color:#111827;
 }
 
 .buttonRow{
@@ -118,15 +117,24 @@ h2{
   font-size:17px;
 }
 
-.primary{ background:var(--btn); color:white; }
-.primary:hover{ background:var(--btnHover); }
+.primary{
+  background:var(--btn);
+  color:white;
+}
+
+.primary:hover{
+  background:var(--btnHover);
+}
 
 .secondary{
   background:white;
   border:1px solid var(--border);
   color:var(--text);
 }
-.secondary:hover{ background:#f9fafb; }
+
+.secondary:hover{
+  background:#f9fafb;
+}
 
 .meta{
   margin-top:18px;
@@ -143,36 +151,47 @@ h2{
 </head>
 
 <body>
-  <div class="container">
 
-    <h1>HOW TO WRITE A COMMENT</h1>
-    <h2>Planungshilfe</h2>
+<div class="container">
 
-    <div class="downloadBox">
+<h1>HOW TO WRITE A COMMENT</h1>
+<h2>Planungshilfe</h2>
 
-      <!-- Vorschau -->
-      <div class="previewWrap">
-        <div class="preview" aria-label="PDF Vorschau">
-          <iframe src="../Planungshilfe_Comment.pdf#view=FitH&toolbar=0&navpanes=0&scrollbar=0"></iframe>
-        </div>
-      </div>
+<div class="downloadBox">
 
-      <!-- Dateiname -->
-      <div class="filename">
-        Datei: <code>Planungshilfe_Comment.pdf</code>
-      </div>
+<div class="previewWrap">
+<div class="preview">
+<iframe src="../Comment_Planungshilfe.pdf#view=FitH&toolbar=0&navpanes=0&scrollbar=0"></iframe>
+</div>
+</div>
 
-      <!-- Buttons -->
-      <div class="buttonRow">
-        <a class="btn primary" href="../Planungshilfe_Comment.pdf" download>PDF herunterladen</a>
-        <a class="btn secondary" href="../Planungshilfe_Comment.pdf" target="_blank" rel="noopener">PDF im Browser anzeigen</a>
-      </div>
+<div class="filename">
+Datei: <code>Comment_Planungshilfe.pdf</code>
+</div>
 
-      <div class="meta">Stand: März 2026</div>
-    </div>
+<div class="buttonRow">
 
-    <div class="footer">© cleverclassroom-edu | S. Wissert</div>
+<a class="btn primary" href="../Comment_Planungshilfe.pdf" download>
+PDF herunterladen
+</a>
 
-  </div>
+<a class="btn secondary" href="../Comment_Planungshilfe.pdf" target="_blank">
+PDF im Browser anzeigen
+</a>
+
+</div>
+
+<div class="meta">
+Stand: März 2026
+</div>
+
+</div>
+
+<div class="footer">
+© cleverclassroom-edu | S. Wissert
+</div>
+
+</div>
+
 </body>
 </html>
