@@ -5,6 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>cleverclassroom-edu – Materialien</title>
   <style>
+    @font-face {
+      font-family: 'Sunborn Sans One';
+      src: url('sunborn-sans-one.otf') format('opentype');
+      font-weight: normal;
+      font-style: normal;
+    }
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -23,15 +30,27 @@
       margin-bottom: 20px;
     }
 
-    h1 {
+    .main-title {
       margin: 0;
-      font-size: 2.4rem;
+      font-family: 'Sunborn Sans One', Arial, sans-serif;
+      font-size: 2.6rem;
+      line-height: 1.1;
+      font-weight: normal;
+    }
+
+    .materials-line {
+      margin-top: 10px;
+      font-family: 'Sunborn Sans One', Arial, sans-serif;
+      font-size: 1.5rem;
+      line-height: 1.1;
+      font-weight: normal;
     }
 
     p.subtitle {
-      margin-top: 10px;
+      margin-top: 16px;
       color: #d8e0ea;
       font-size: 1.1rem;
+      line-height: 1.5;
     }
 
     .container {
@@ -84,7 +103,8 @@
 <body>
   <header>
     <img src="Logo_Cleverclassroom_NoBG.png" alt="CleverClassroom Logo">
-    <h1>cleverclassroom-edu | Materialien</h1>
+    <h1 class="main-title">Welcome to cleverclassroom-edu</h1>
+    <div class="materials-line">– Materialien –</div>
     <p class="subtitle">Wähle den passenden Aufgabenstil und öffne Materialien, Planungshilfen und Feedback-Prompts.</p>
   </header>
 
