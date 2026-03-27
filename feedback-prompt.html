@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback-Prompt</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #0f2747;
+      color: white;
+      margin: 0;
+      padding: 40px 20px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #d6deea;
+      line-height: 1.5;
+    }
+
+    textarea {
+      width: 100%;
+      height: 420px;
+      padding: 16px;
+      font-size: 15px;
+      line-height: 1.5;
+      border: none;
+      border-radius: 12px;
+      resize: vertical;
+      box-sizing: border-box;
+      margin-top: 20px;
+    }
+
+    button {
+      margin-top: 16px;
+      background: #f0c84b;
+      color: #10233f;
+      border: none;
+      padding: 14px 20px;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .note {
+      margin-top: 12px;
+      color: #d6deea;
+      font-size: 14px;
+    }
+
+    a.back {
+      display: inline-block;
+      margin-bottom: 24px;
+      color: #f0c84b;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a class="back" href="./">← Zurück</a>
+
+    <h1>Feedback-Prompt</h1>
+    <p>Hier kannst du den Prompt direkt kopieren und in ChatGPT einfügen.</p>
+
+    <textarea id="promptBox" readonly>Aufgabe an das System: 
+Der Schüler liefert einen englischen Comment zur Prüfungsvorbereitung Englisch Realschule Baden-Württemberg (Opinion Task / Pros & Cons). 
+
+Ziel: ca. 100 Wörter. 
+Prüfungsfenster: mindestens 90, maximal 120 Wörter (ab 121 gibt es Punktabzug). 
+
+Gib professionelles, motivierendes, schülergerechtes und präzises Feedback – fokussiert auf bessere Prüfungsergebnisse. 
+
+Ton: freundlich-coachend, klar, motivierend. Kein Baby-Talk, keine Abwertung, keine Noten. 
+
+Ziel: „Coach → Upgrade → Prüfungserfolg". 
+
+WICHTIG: Ein Comment ist meinungsbetont, aber fair abwägend: Pro und Contra sollen sichtbar sein, am Ende steht eine klare Position (oder ein „it depends" mit Bedingung), die logisch aus den Argumenten folgt. 
+
+Außerdem gilt: Beim Thema bleiben ist Pflicht – wenn der Text am Thema vorbeigeht, ist das in der Prüfung ein KO-Kriterium.
+
+---
+
+ABSOLUT WICHTIG (für alle Bewertungen mit 🟢/🟡/❌): 
+
+Schreibe direkt hinter jedes Emoji eine kurze, schülergerechte Begründung (1 kurzer Satz), warum die Bewertung so ist. 
+
+Bei 🟡 oder ❌ kommt sofort danach ein konkreter Sofort-Tipp, den der Schüler direkt umsetzen kann (max. 1 Satz) und – wenn möglich – ein konkretes Beispiel im Format „Originalsatz: '…' → Upgrade: '…'". 
+
+Bei 🟢 kommt ebenfalls ein kurzer Satz dazu, was genau der Schüler richtig gemacht hat, damit er es wiederholen kann.
+
+---
+
+AUSGABEFORMAT (in genau dieser Reihenfolge):
+
+Starte mit: 
+„Top! Hier kommt dein Comment-Feedback — praktisch, klar, ready to use."
+
+Falls Thema genannt: 
+„Dein Comment zum Thema „TOPIC" zeigt bereits eine klare Richtung…"
+
+Danach: 
+„Jetzt schauen wir, wie du Struktur, Argumentation und Sprache weiter schärfen kannst."
+
+---
+
+1⃣ 🧭 TEXTSORTE & AUFGABENBEZUG (Comment):
+
+Prüfe, ob der Aufgabenbezug exakt getroffen ist und ob der Text beim Thema bleibt (🟢/🟡/❌ + Begründung + ggf. Sofort-Tipp). 
+
+Prüfe, ob der Stil comment-typisch ist: eigene Meinung erkennbar, aber nicht unfair oder „Essay-neutral" (🟢/🟡/❌ + Begründung + ggf. Sofort-Tipp). 
+
+Gib danach 2 Mini-Fixes (Sprachliche Upgrades, die das Niveau heben – keine reinen Grammatikkorrekturen wie Artikel oder 3. Person -s) im Format: 
+„Originalsatz: '…' → Upgrade: '…'" (direkt ersetzbar).
+
+---
+
+2⃣ 🔢 WORTZAHL & PRÜFUNGSFENSTER:
+
+Zähle die Wörter exakt: **X Wörter**. 
+
+Prüfe das Prüfungsfenster (90–120) (🟢/🟡/❌ + Begründung + ggf. Sofort-Tipp). 
+
+Gib eine Coach-Empfehlung:
+- Wenn zu lang: Kürze Wiederholungen oder streiche ein Detail/Beispiel (Ziel: −10 bis −20 Wörter).
+- Wenn zu kurz: Ergänze einen kurzen Grund oder ein Mini-Effect bzw. Mini-Example (max. 1 Satz) und stärke den Schluss.
+- Wenn 🟢: „Word-Management: prüfungsstark."
+
+---
+
+3⃣ 🏗 STRUKTUR (Mini-Urteil):
+
+Prüfe Einleitung–Hauptteil–Schluss (🟢/🟡/❌ + Begründung + ggf. Sofort-Tipp) und ob die Wort-Gewichtung ungefähr passt:
+- Einleitung: 15–20 Wörter
+- Hauptteil: 60–70 Wörter
+- Schluss: 15–20 Wörter
+(🟢/🟡/❌ + Begründung + ggf. Sofort-Tipp)
+
+Prüfe logische Reihenfolge (🟢/🟡/❌ + Begründung + ggf. Sofort-Tipp) und ob Pro und Contra sichtbar sind (🟢/🟡/❌ + Begründung + ggf. Sofort-Tipp).
+
+Prüfe außerdem: Steht das stärkste Argument kurz vor dem Fazit? (🟢/🟡/❌ + Begründung + ggf. Sofort-Tipp)
+
+Gib anschließend 1 Übergangs-Upgrade (Pro → Contra oder Contra → Fazit) im Format: 
+„Originalsatz: '…' → Upgrade: '…'"
+
+---
+
+4⃣ ⚖ ARGUMENTATION (Micro-Argumente):
+
+Prüfe Pro-Argument(e) (🟢/🟡/❌ + Begründung + ggf. Sofort-Tipp).
+
+Prüfe Contra-Argument(e) (🟢/🟡/❌ + Begründung + ggf. Sofort-Tipp).
+
+Prüfe Begründungen/Mini-Effect oder Mini-Example (🟢/🟡/❌ + Begründung + konkreter Sofort-Tipp).
+
+Wichtig: 
+- Mini-Effect: Was folgt daraus? (z. B. „This means…", „This leads to…", „As a result…", „That way…")
+- Mini-Example: Konkretes Beispiel (z. B. „For example…", „For instance…", „A good example is…")
+- Nie beides im selben Argument, max. 1 Zusatz pro Argument
+- Prüfe, ob mindestens eines der Argumente einen solchen Zusatz enthält
+
+Wichtig: Jedes Argument sollte als Micro-Argument formuliert sein:
+1 Satz = Claim (Was?) + Reason (Warum?)
+
+Dabei Abwechslung bei den Konnektoren beachten: nicht immer „because", sondern auch „since", „as", „which means", „making it", „leaving" (🟢/🟡/❌ + Begründung + ggf. Sofort-Tipp).
+
+Prüfe, ob das Muster erkennbar ist: 2+2 (ausgeglichen) oder 3+1 (eine Seite stärker) und ob es zum Fazit passt (🟢/🟡/❌ + Begründung + ggf. Sofort-Tipp).
+
+Danach gib 2 Mini-Upgrades als vollständige Sätze (1 Pro + 1 Contra) im Format: 
+„Originalsatz: '…' → Upgrade: '…'"
+(wenn nötig nutze einen „Ersatzsatz")
+
+---
+
+5⃣ 🎣 EINLEITUNG (Hook & Fokus):
+
+Prüfe, ob die Einleitung das Thema sauber eröffnet oder eine Leitfrage setzt (🟢/🟡/❌ + Begründung + ggf. Sofort-Tipp).
+
+Referenz: Eine gute Einleitung nutzt Phrasen wie:
+- „Many people believe that…"
+- „In today's world…"
+- „The question is:"
+- oder startet direkt mit einer kurzen Leitfrage
+
+Gib 2 Alternativen (je 1 Satz):
+- Option A: neutral-direkt
+- Option B: als kurze Frage/Impuls
+
+---
+
+6⃣ 🏁 SCHLUSS (Position & Wirkung):
+
+Prüfe, ob der Schluss bündelt ohne zu wiederholen (🟢/🟡/❌ + Begründung + ggf. Sofort-Tipp).
+
+Prüfe, ob die Position aus den Argumenten folgt (🟢/🟡/❌ + Begründung + ggf. Sofort-Tipp).
+
+Prüfe: Ist es eine klare Meinung (Pro/Contra) oder ein „it depends" mit Bedingung? (🟢/🟡/❌ + Begründung + ggf. Sofort-Tipp)
+
+Referenz für gute Schlusssätze:
+- „All in all, I think…"
+- „Therefore, I believe…"
+- „Overall, it depends on… but…"
+- „To sum up,… but only if…"
+- „In conclusion,… as long as…"
+
+Gib 2 starke Beispiel-Schlusssätze + 1 Satz Begründung, warum sie besser wirken.
+
+---
+
+7⃣ ✍ SPRACHE, LINKING WORDS & USEFUL PHRASES:
+
+Prüfe Satzbau-Variation (🟢/🟡/❌ + Begründung + ggf. Sofort-Tipp).
+
+Prüfe Register (🟢/🟡/❌ + Begründung + ggf. Sofort-Tipp).
+
+Prüfe Übergänge (🟢/🟡/❌ + Begründung + ggf. Sofort-Tipp).
+
+Zielregel: 2–3 Linking Words reichen völlig; zu viele wirken künstlich (🟢/🟡/❌ + Begründung + ggf. Sofort-Tipp).
+
+Referenz Linking Words:
+- On the one hand… / On the other hand…
+- However…
+- Nevertheless…
+- Moreover…
+- Also…
+- As a result…
+- Therefore…
+
+Prüfe zusätzlich Useful Phrases (🟢/🟡/❌ + Begründung + ggf. Sofort-Tipp): 
+Werden passende Starter genutzt und gibt es Variation statt Wiederholung?
+
+Referenz Useful Phrases:
+- Einleitung: „Many people believe that…", „Nowadays,…", „In today's world,…", „The question is:…"
+- Micro-Argumente: „One advantage is that… since/as…", „Another point is that… as…", „One problem is that… since…", „This can be helpful, since…"
+- Gegenseite: „However,…", „On the other hand,…", „That said,…", „Still,…"
+- Abschluss: „All in all, I think…", „Therefore, I believe…", „Overall,…", „To sum up,… but only if…"
+- Reason-Variationen statt „because": since, as, which means, making it, leaving
+
+Gib 3 Austausch-Vorschläge im Kontext (inkl. 1 Alternative fürs Fazit) im Format: 
+„Phrase/Teil: X → Alternative(n): Y / Z 
+(Originalsatz: '…' → Upgrade: '…')"
+
+Sowie 3–4 weitere Upgrades mit Originalsatz → Upgrade.
+
+---
+
+8⃣ 🧩 GRAMMATIK – Genauigkeit (Tabelle):
+
+Erstelle eine Tabelle mit 3 Spalten:
+| ❌ Fehler im Satz | 🟢 Korrektur im Satz | 🧠 Coach-Erklärung |
+
+Gib pro Fehler zuerst eine Minimal-Korrektur, die so nah wie möglich am Original bleibt und nur den Fehler behebt.
+
+Wenn es zusätzlich eine deutlich natürlichere, prüfungsstärkere Formulierung mit gleicher Bedeutung gibt, ergänze direkt darunter optional:
+„✨ Style-Upgrade (optional): …" 
+(max. 1 Alternative, kein Umschreiben des ganzen Textes)
+
+Wenn es wenige Fehler gibt, nenne trotzdem mind. 2 typische Optimierungen.
+
+---
+
+9⃣ 🔤 RECHTSCHREIBUNG:
+
+Liste konkrete Fehler (falls vorhanden) und gib kurze Coach-Hinweise (z. B. -ly, their/there, because, typische spelling patterns).
+
+---
+
+🔟 🛠 5 UPGRADES (Mini-Surgery):
+
+Gib 5 zusätzliche Upgrades, die NICHT bereits in 1⃣–9⃣ vorkamen (keine Wiederholungen).
+
+Format:
+„Original: … 
+→ Tipp (prüfungsfit): … 
+→ Top-Tipp (stilistisch stärker): … 
+→ 📝 Warum besser: …"
+
+Wenn weniger als 5 ohne Wiederholung möglich sind, gib nur die neuen und schreibe:
+„Weitere Upgrades würden Wiederholungen erzeugen."
+
+---
+
+1⃣1⃣ 🌟 SCHLUSSFAZIT:
+
+Schreibe ein kurzes Schlussfazit als Fließtext (~50 Wörter) mit:
+- 3–4 Stärken
+- 2–3 nächsten Zielen
+- freundlich, motivierend, realistisch, prüfungsnah
+
+Am Ende zusätzlich 1 motivierender „Fazit in einem Satz" auf Deutsch (kreativ, kurz, nicht notenfokussiert).
+
+---
+
+Hier ist mein Comment:</textarea>
+
+    <button onclick="copyPrompt()">Prompt kopieren</button>
+    <div class="note" id="copyNote"></div>
+  </div>
+
+  <script>
+    function copyPrompt() {
+      const box = document.getElementById("promptBox");
+      navigator.clipboard.writeText(box.value).then(() => {
+        document.getElementById("copyNote").textContent = "Prompt wurde kopiert.";
+      });
+    }
+  </script>
+</body>
+</html>
