@@ -1,120 +1,109 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CleverClassroom – KI-Feedback</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(180deg, #10284a 0%, #0b1f3a 100%);
+      color: white;
+    }
 
-<title>CleverClassroom Edu</title>
+    header {
+      text-align: center;
+      padding: 40px 20px 20px;
+    }
 
-<style>
+    header img {
+      max-width: 180px;
+      height: auto;
+      margin-bottom: 20px;
+    }
 
-@font-face {
-  font-family: "Sunborn";
-  src: url("sunborn-sans-one.otf") format("opentype");
-}
+    h1 {
+      margin: 0;
+      font-size: 2.4rem;
+    }
 
-body{
-  margin:0;
-  background:#f4f4f4;
-  font-family:Arial, Helvetica, sans-serif;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  height:100vh;
-  text-align:center;
-  color:#1a1a1a;
-}
+    p.subtitle {
+      margin-top: 10px;
+      color: #d8e0ea;
+      font-size: 1.1rem;
+    }
 
-.container{
-  max-width:700px;
-  padding:20px 40px 40px 40px;
-}
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px 60px;
+    }
 
-.logo{
-  width:340px;
-  margin-bottom:8px;
-}
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
 
-h1{
-  font-family:"Sunborn", Arial;
-  margin-bottom:14px;
-  line-height:0.96;
-}
+    .card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 18px;
+      padding: 28px;
+      text-decoration: none;
+      color: white;
+      transition: transform 0.15s ease, background 0.15s ease;
+    }
 
-.welcome{
-  display:block;
-  font-size:65px;
-}
+    .card:hover {
+      transform: translateY(-3px);
+      background: rgba(255,255,255,0.1);
+    }
 
-.brand{
-  display:block;
-  font-size:52px;
-  margin-top:-3px;
-}
+    .card h2 {
+      margin-top: 0;
+      margin-bottom: 12px;
+      font-size: 1.5rem;
+    }
 
-p{
-  font-size:18px;
-  line-height:1.6;
-  margin-bottom:28px;
-}
+    .card p {
+      margin: 0;
+      color: #d8e0ea;
+      line-height: 1.5;
+    }
 
-.button{
-  display:inline-block;
-  background:#28bfbf;
-  color:white;
-  padding:16px 34px;
-  font-size:18px;
-  text-decoration:none;
-  border-radius:8px;
-  font-weight:bold;
-  transition:0.2s;
-}
-
-.button:hover{
-  background:#1fa7a7;
-}
-
-.footer{
-  margin-top:35px;
-  font-size:14px;
-  color:#777;
-}
-
-.author{
-  font-size:12px;
-  margin-top:4px;
-}
-
-</style>
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #b8c5d6;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
-
 <body>
+  <header>
+    <img src="Logo_Cleverclassroom_NoBG.png" alt="CleverClassroom Logo">
+    <h1>CleverClassroom KI-Feedback</h1>
+    <p class="subtitle">Wähle den passenden Aufgabenstil und öffne Materialien, Planungshilfen und Feedback-Prompts.</p>
+  </header>
 
-<div class="container">
+  <div class="container">
+    <div class="cards">
+      <a class="card" href="comment.html">
+        <h2>Comment Writing</h2>
+        <p>Planungshilfe, Feedback-Bogen und kopierfertiger KI-Prompt für das Schreiben von Comments.</p>
+      </a>
 
-<img src="Logo_Cleverclassroom_NoBG.png" class="logo">
+      <a class="card" href="essay.html">
+        <h2>Essay Writing</h2>
+        <p>Materialien, Feedback-Bogen und KI-Prompt für strukturierte Essays.</p>
+      </a>
+    </div>
+  </div>
 
-<h1>
-<span class="welcome">WELCOME TO</span>
-<span class="brand">CLEVERCLASSROOM-EDU</span>
-</h1>
-
-<p>
-Praxisnahe Unterrichtsmaterialien für den Englischunterricht – klar strukturiert, direkt einsetzbar, prüfungsfit.
-</p>
-
-<a class="button"
-href="https://eduki.com/de/autor/4276120/cleverclassroom-edu"
-target="_blank">
-Zum Eduki-Shop
-</a>
-
-<div class="footer">
-© cleverclassroom-edu
-<div class="author">Steffen Wissert</div>
-</div>
-
-</div>
-
+  <footer>
+    CleverClassroom
+  </footer>
 </body>
 </html>
