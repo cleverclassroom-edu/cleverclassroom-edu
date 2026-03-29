@@ -4,6 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Essay Writing – CleverClassroom</title>
+  <meta name="description" content="Cleverclassroom – Materialien für Essay Writing.">
+  <link rel="icon" type="image/png" href="Logo_Cleverclassroom_NoBG.png">
+  <meta property="og:title" content="Cleverclassroom | Essay Writing">
+  <meta property="og:description" content="Materialien, Planungshilfen und Feedback-Tools für Essay Writing.">
+  <meta property="og:image" content="https://cleverclassroom-edu.github.io/Logo_Cleverclassroom_NoBG.png">
+
   <style>
     body {
       margin: 0;
@@ -35,7 +41,7 @@
     }
 
     .container {
-      max-width: 1000px;
+      max-width: 1200px;
       margin: 30px auto;
       padding: 0 20px 60px;
     }
@@ -48,11 +54,44 @@
       font-weight: bold;
     }
 
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 22px;
+      align-items: stretch;
+    }
+
     .box {
       background: rgba(255,255,255,0.06);
       border: 1px solid rgba(255,255,255,0.12);
       border-radius: 18px;
       padding: 24px;
+      min-height: 220px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .box h2 {
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+
+    .box p {
+      color: #d8e0ea;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #f0c84b;
+      color: #10284a;
+      padding: 12px 18px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      align-self: flex-start;
     }
 
     footer {
@@ -67,14 +106,36 @@
   <header>
     <img src="Logo_Cleverclassroom_NoBG.png" alt="CleverClassroom Logo">
     <h1>Essay Writing</h1>
-    <p class="subtitle">Diese Seite wird als Nächstes ergänzt.</p>
+    <p class="subtitle">Hier findest du alle Materialien für das Schreiben von Essays.</p>
   </header>
 
   <div class="container">
     <a class="back" href="index.html">← Zurück zur Übersicht</a>
 
-    <div class="box">
-      <p>Hier kannst du später Feedback-Bogen, Planungshilfe und KI-Prompt für Essays ergänzen.</p>
+    <div class="grid">
+      <div class="box">
+        <div>
+          <h2>Feedback-Bogen</h2>
+          <p>Lade hier den passenden Feedback-Bogen als PDF herunter.</p>
+        </div>
+        <a class="btn" href="essay_feedbackbogen.pdf" target="_blank">PDF öffnen</a>
+      </div>
+
+      <div class="box">
+        <div>
+          <h2>Planungshilfe</h2>
+          <p>Hier findest du die Planungshilfe für das Schreiben eines Essays.</p>
+        </div>
+        <a class="btn" href="essay_planungshilfe.pdf" target="_blank">PDF öffnen</a>
+      </div>
+
+      <div class="box">
+        <div>
+          <h2>Feedback-Prompt</h2>
+          <p>Öffne die Seite mit dem kopierfertigen KI-Prompt.</p>
+        </div>
+        <a class="btn" href="essay_feedback-prompt.html">Prompt öffnen</a>
+      </div>
     </div>
   </div>
 
